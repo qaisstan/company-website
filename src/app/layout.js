@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Header /> {/* Remove theme and toggleTheme props unless defined */}
-          <main className="flex-grow container mx-auto p-8">{children}</main>
+          <main className="flex-grow container mx-auto p-8 max-w-4xl">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

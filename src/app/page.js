@@ -1,14 +1,16 @@
-import { Button } from "@/components/ui/button";
+import AnimatedHeroSection from "@/components/HeroSection";
+import AnimatedServiceCards from "@/components/AnimatedServiceCard";
+import AnimatedHorizontalLine from "@/components/HorizontalLine";
+import EnhancedAnimatedTestimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
     <>
       {" "}
-      <div>
-        <h1>Welcome to My Company</h1>
-        <p>This is the home page.</p>
-        <Button> Click Me </Button>
-      </div>
+      <AnimatedHeroSection />
+      <AnimatedHorizontalLine />
+      <AnimatedServiceCards />
+      <EnhancedAnimatedTestimonials />
     </>
   );
 }
