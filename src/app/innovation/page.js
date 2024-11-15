@@ -35,41 +35,23 @@ const innovationItems = [
 
 export default function InnovationPage() {
   return (
-    <div className="container mx-auto px-4 py-16 md:py-24">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="space-y-12"
-      >
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            Driving Innovation
-          </h1>
-          <p className="mt-4 text-xl text-gray-500 max-w-2xl mx-auto">
-            Empowering businesses with cutting-edge technology solutions for
-            enhanced efficiency and scalability.
-          </p>
-        </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="container mx-auto px-4 py-12"
+    >
+      <h1 className="text-3xl font-bold mb-8 text-center">
+        Driving Innovation
+      </h1>
+      <p className="text-lg leading-relaxed text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+        Empowering businesses with cutting-edge technology solutions for
+        enhanced efficiency and scalability.
+      </p>
 
-        <section className="bg-gray-50 rounded-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4">
-            Modern Tools for Optimized Workflows
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Our innovative solutions leverage the latest technologies to
-            streamline your business processes:
-          </p>
-          <ul className="list-disc list-inside text-gray-600 space-y-2">
-            <li>AI-powered automation for repetitive tasks</li>
-            <li>Cloud-based collaboration tools for remote teams</li>
-            <li>Data analytics platforms for informed decision-making</li>
-            <li>Blockchain solutions for enhanced security and transparency</li>
-          </ul>
-        </section>
-
+      <div className="space-y-12">
         <section>
-          <h2 className="text-2xl font-semibold mb-6 text-center">
+          <h2 className="text-2xl font-semibold mb-4 text-center">
             Our Innovative Offerings
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -80,15 +62,17 @@ export default function InnovationPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card>
+                <Card className="shadow-lg">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <item.icon className="h-6 w-6 mr-2 text-blue-500" />
+                      <item.icon className="h-6 w-6 mr-2 text-primary" />
                       {item.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>{item.description}</CardDescription>
+                    <CardDescription className="text-muted-foreground">
+                      {item.description}
+                    </CardDescription>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -96,29 +80,22 @@ export default function InnovationPage() {
           </div>
         </section>
 
-        <section className="bg-blue-50 rounded-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4">
-            Custom Innovation Solutions
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 text-center">
+            Tailored Innovation Solutions
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto text-center mb-6">
             We specialize in developing tailored applications that address your
-            unique business challenges. Our team of experts works closely with
-            you to create innovative solutions that drive growth and efficiency.
+            unique business challenges. Let&apos;s craft solutions that drive
+            growth and efficiency together.
           </p>
-          <Button>
-            Explore Custom Solutions <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <div className="flex justify-center">
+            <Button>
+              Explore Custom Solutions <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </section>
-
-        <section className="text-center">
-          <h2 className="text-2xl font-semibold mb-4">Ready to Innovate?</h2>
-          <p className="text-gray-600 mb-6">
-            Let&apos;s discuss how our cutting-edge solutions can transform your
-            business.
-          </p>
-          <Button size="lg">Get in Touch</Button>
-        </section>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }
