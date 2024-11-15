@@ -1,5 +1,7 @@
 "use client";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,8 +19,11 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Header /> {/* Remove theme and toggleTheme props unless defined */}
-          <main className="flex-grow container mx-auto p-8 max-w-4xl">{children}</main>
+          <main className="flex-grow container mx-auto p-8 max-w-4xl">
+            {children}
+          </main>
           <Footer />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
