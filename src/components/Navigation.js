@@ -10,7 +10,12 @@ import {
   Newspaper,
   Lightbulb,
   Users,
+  Globe,
+  Cpu,
+  Search,
+  Cloud,
   PhoneCall,
+  Code,
   ChevronDown,
 } from "lucide-react";
 
