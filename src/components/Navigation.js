@@ -98,7 +98,7 @@ export default function Navbar({ isMobile = false }) {
                             href={dropdownItem.href}
                             className="flex items-center space-x-2"
                           >
-                            <Briefcase className="h-4 w-4" />
+                            <dropdownItem.icon className="h-4 w-4" />
                             <span>{dropdownItem.name}</span>
                           </Link>
                         </DropdownMenuItem>
@@ -149,7 +149,7 @@ export default function Navbar({ isMobile = false }) {
                     href={dropdownItem.href}
                     className="flex items-center space-x-2"
                   >
-                    <Briefcase className="h-4 w-4" />
+                    <dropdownItem.icon className="h-4 w-4" />
                     <span>{dropdownItem.name}</span>
                   </Link>
                 </DropdownMenuItem>
