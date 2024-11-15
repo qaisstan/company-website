@@ -30,9 +30,27 @@ const navItems = [
     href: "/services",
     icon: Briefcase,
     dropdownItems: [
-      { name: "Web Development", href: "/services/web-development" },
-      { name: "Mobile Apps", href: "/services/mobile-apps" },
-      { name: "Consulting", href: "/services/consulting" },
+      {
+        name: "Web Development",
+        href: "/services/web-development",
+        icon: Globe,
+      },
+      { name: "API Integration", href: "/services/api-integration", icon: Cpu },
+      {
+        name: "Cloud and Infrastructure",
+        href: "/services/cloud-infrastructure",
+        icon: Cloud,
+      },
+      {
+        name: "SEO Optimization",
+        href: "/services/seo-optimization",
+        icon: Search,
+      },
+      {
+        name: "Full-Stack Application Development",
+        href: "/services/full-stack-development",
+        icon: Code,
+      },
     ],
   },
   { name: "Blog", href: "/blog", icon: Newspaper },
