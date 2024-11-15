@@ -44,7 +44,7 @@ export default function AnimatedHeroSection() {
               Explore Solutions
             </Button>
             <Button variant="outline" size="lg">
-              Schedule a Demo
+              Get a Free Consultation
             </Button>
           </motion.div>
         </motion.div>
