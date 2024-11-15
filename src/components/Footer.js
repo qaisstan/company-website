@@ -53,32 +53,48 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Custom Software Development
+                <Link
+                  href="/services/web-development"
+                  className="hover:text-white transition-colors"
+                >
+                  Web Development
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Cloud Solutions
+                <Link
+                  href="/services/api-integration"
+                  className="hover:text-white transition-colors"
+                >
+                  API Integration
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  AI & Machine Learning
+                <Link
+                  href="/services/cloud-infrastructure"
+                  className="hover:text-white transition-colors"
+                >
+                  Cloud and Infrastructure
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  IoT Integration
+                <Link
+                  href="/services/seo-optimization"
+                  className="hover:text-white transition-colors"
+                >
+                  SEO Optimization
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
-                  Cybersecurity
+                <Link
+                  href="/services/full-stack-development"
+                  className="hover:text-white transition-colors"
+                >
+                  Full-Stack Application Development
                 </Link>
               </li>
             </ul>
           </div>
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-2">
