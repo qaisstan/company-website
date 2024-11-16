@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "@/app/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({ children }) {
   return (
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <Analytics />
           <SpeedInsights />
         </ThemeProvider>
       </body>
