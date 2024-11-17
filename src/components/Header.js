@@ -8,7 +8,7 @@ export default function Header() {
     <header className="relative z-50 flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
       {/* Company Logo */}
       <div className="flex items-center space-x-4">
-        <div className="text-lg font-semibold">MyCompany</div>
+        <div className="text-lg font-semibold">TRUSTON</div>
       </div>
 
       {/* Desktop Navigation */}
