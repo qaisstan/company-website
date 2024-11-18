@@ -2,13 +2,32 @@
 
 import Navigation from "@/components/Navigation";
 import { ModeToggle } from "@/components/mode-toggle";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Ensure the component is mounted before rendering theme-dependent content
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <header className="relative z-50 flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+    <header className="relative z-50 flex items-center justify-between p-4">
       {/* Company Logo */}
       <div className="flex items-center space-x-4">
-        <div className="text-lg font-semibold">TRUSTON</div>
+        {mounted && (
+          <Image
+            src={theme === "dark" ? "/logo-black.png" : "/logo-white.png"}
+            alt="Company Logo"
+            width={100} // Adjust width as needed
+            height={40} // Adjust height as needed
+            priority
+          />
+        )}
       </div>
 
       {/* Desktop Navigation */}

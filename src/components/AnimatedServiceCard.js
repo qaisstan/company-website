@@ -1,88 +1,106 @@
 "use client";
 
-import { motion } from "framer-motion";
+import React from "react";
+import { cn } from "@/lib/utils";
 import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Cpu, Cloud, Search, Code } from "lucide-react";
+  Globe,
+  Cpu,
+  Cloud,
+  Search,
+  Code,
+  Zap,
+  BarChart,
+  Repeat,
+} from "lucide-react";
 
 const services = [
   {
+    title: "AI Solutions",
+    description:
+      "Implement advanced AI systems to automate tasks and unlock valuable insights.",
+    icon: <Zap />,
+  },
+  {
+    title: "Automation",
+    description:
+      "Simplify complex workflows with intelligent, automated solutions.",
+    icon: <Repeat />,
+  },
+  {
     title: "Web Development",
     description:
-      "Create responsive and dynamic websites tailored to your business needs.",
-    icon: Globe,
+      "Build fast, modern websites that provide seamless user experiences.",
+    icon: <Globe />,
   },
   {
     title: "API Integration",
     description:
-      "Seamlessly connect your systems with third-party services and platforms.",
-    icon: Cpu,
+      "Integrate external services to enhance your system's functionality.",
+    icon: <Cpu />,
   },
   {
     title: "Cloud and Infrastructure",
     description:
-      "Build scalable and reliable cloud solutions for your applications.",
-    icon: Cloud,
+      "Deploy scalable and secure cloud systems tailored to your needs.",
+    icon: <Cloud />,
   },
   {
     title: "SEO Optimization",
     description:
-      "Improve your online visibility and drive organic traffic to your website.",
-    icon: Search,
+      "Boost your site's visibility with data-driven search optimization.",
+    icon: <Search />,
   },
   {
     title: "Full-Stack Application Development",
-    description: "End-to-end development of robust and scalable applications.",
-    icon: Code,
+    description:
+      "Create feature-rich applications with a focus on performance and reliability.",
+    icon: <Code />,
+  },
+  {
+    title: "Analytics",
+    description:
+      "Transform your data into actionable insights with intuitive analytics tools.",
+    icon: <BarChart />,
   },
 ];
 
-export default function AnimatedServiceCards() {
+export default function AnimatedCardService() {
   return (
-    <section className="w-full pb-20 md:pb-20 lg:py-20 bg-background">
-      <div className="container justify-center px-4 md:px-6">
-        <motion.h2
-          className="text-3xl  font-bold text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Our Services
-        </motion.h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full flex flex-col">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <CardTitle>{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow" />
-                <CardContent>
-                  <Button variant="ghost" className="w-full group">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 p-0 max-w-7xl mx-auto">
+      {services.map((service, index) => (
+        <ServiceCard key={service.title} {...service} index={index} />
+      ))}
+    </div>
   );
 }
+
+const ServiceCard = ({ title, description, icon, index }) => {
+  return (
+    <div
+      className={cn(
+        "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800",
+        (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
+        index < 4 && "lg:border-b dark:border-neutral-800"
+      )}
+    >
+      {index < 4 && (
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+      )}
+      {index >= 4 && (
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+      )}
+      <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
+        {icon}
+      </div>
+      <div className="text-lg font-bold mb-2 relative z-10 px-10">
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-800 dark:text-neutral-100">
+          {title}
+        </span>
+      </div>
+      <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
+        {description}
+      </p>
+    </div>
+  );
+};

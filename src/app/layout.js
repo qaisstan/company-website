@@ -15,12 +15,12 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col min-h-screen">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark" // Default to dark theme
+          enableSystem={false} // Disable system theme to avoid mismatches
           disableTransitionOnChange
         >
           <Header /> {/* Remove theme and toggleTheme props unless defined */}
-          <main className="flex-grow container mx-auto p-8 max-w-4xl">
+          <main className="flex-grow container mx-auto m-0 p-0 ">
             {children}
           </main>
           <Footer />
