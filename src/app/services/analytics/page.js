@@ -6,72 +6,72 @@ import Image from "next/image";
 
 const content = [
   {
-    title: "Responsive Design",
+    title: "Data Insights",
     description:
-      "Build websites that adapt seamlessly to any device, offering a great user experience across desktop, tablet, and mobile platforms.",
+      "Transform raw data into actionable insights. Our analytics solutions help you make informed decisions with ease.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/Analytics.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Responsive Design"
+          alt="Data Insights"
         />
       </div>
     ),
   },
   {
-    title: "Custom Development",
+    title: "Real-Time Analytics",
     description:
-      "Tailor-made solutions designed to meet your unique business needs, ensuring functionality and scalability.",
+      "Track metrics and KPIs in real time. Stay ahead of the competition with up-to-date insights into your performance.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/Analytics.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Custom Development"
+          alt="Real-Time Analytics"
         />
       </div>
     ),
   },
   {
-    title: "E-commerce Platforms",
+    title: "Custom Dashboards",
     description:
-      "Create robust and scalable online stores to enhance your sales and deliver a seamless shopping experience.",
+      "Create tailored dashboards to visualize the data that matters most to your business.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/Analytics.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="E-commerce Platforms"
+          alt="Custom Dashboards"
         />
       </div>
     ),
   },
   {
-    title: "Website Maintenance",
+    title: "Predictive Analytics",
     description:
-      "Ensure your website remains up-to-date, secure, and optimized with our continuous support services.",
+      "Utilize AI-driven predictive analytics to anticipate trends and make proactive decisions.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/Analytics.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Website Maintenance"
+          alt="Predictive Analytics"
         />
       </div>
     ),
   },
 ];
 
-export default function WebDevelopment() {
+export default function AnalyticsPage() {
   return (
     <div className="p-10">
       <StickyScroll content={content} />

@@ -1,39 +1,80 @@
 "use client";
 
 import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
-import { Code } from "lucide-react";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import Image from "next/image";
+
+const content = [
+  {
+    title: "End-to-End Solutions",
+    description:
+      "Delivering comprehensive development from frontend to backend, ensuring seamless functionality and performance.",
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image
+          src="/AI.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="End-to-End Solutions"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "User-Centric Frontend",
+    description:
+      "Create intuitive and visually appealing interfaces that enhance user engagement and satisfaction.",
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image
+          src="/AI.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="User-Centric Frontend"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Scalable Backend",
+    description:
+      "Design and implement robust backend systems that handle complex processes and scale with your business.",
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image
+          src="/AI.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="Scalable Backend"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Integration and Deployment",
+    description:
+      "Seamlessly integrate APIs and deploy applications with cutting-edge tools and technologies.",
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image
+          src="/AI.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="Integration and Deployment"
+        />
+      </div>
+    ),
+  },
+];
 
 export default function FullStackDevelopment() {
   return (
-    <section className="container py-12">
-      <Card className="w-full">
-        <CardHeader>
-          <div className="flex items-center space-x-4">
-            <Code className="h-8 w-8" />
-            <CardTitle>Full-Stack Application Development</CardTitle>
-          </div>
-          <CardDescription>
-            End-to-end development of robust and scalable applications to meet
-            your business needs.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>
-            Our full-stack development services cover both front-end and
-            back-end development, ensuring a seamless user experience and
-            efficient server-side logic. We leverage modern technologies to
-            build scalable, maintainable, and high-performing applications that
-            can grow with your business.
-          </p>
-        </CardContent>
-      </Card>
-    </section>
+    <div className="p-10">
+      <StickyScroll content={content} />
+    </div>
   );
 }

@@ -1,30 +1,80 @@
 "use client";
 
 import React from "react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Cpu } from "lucide-react";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import Image from "next/image";
+
+const content = [
+  {
+    title: "Seamless Integration",
+    description:
+      "Connect your systems effortlessly with third-party APIs. Enhance your application's functionality with seamless integration solutions.",
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image
+          src="/Api.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="Seamless Integration"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Custom API Development",
+    description:
+      "Build tailored APIs to meet your unique business needs. Our solutions ensure reliability and scalability.",
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image
+          src="/Api.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="Custom API Development"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Real-Time Data Sync",
+    description:
+      "Enable real-time data synchronization across platforms. Keep your systems updated with the latest information effortlessly.",
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image
+          src="/Api.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="Real-Time Data Sync"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "API Security",
+    description:
+      "Implement robust security protocols to protect sensitive data and ensure safe communication between systems.",
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image
+          src="/Api.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="API Security"
+        />
+      </div>
+    ),
+  },
+];
 
 export default function ApiIntegration() {
   return (
-    <section className="container py-12">
-      <Card className="w-full">
-        <CardHeader>
-          <div className="flex items-center space-x-4">
-            <Cpu className="h-8 w-8" />
-            <CardTitle>API Integration</CardTitle>
-          </div>
-          <CardDescription>
-            Seamlessly connect your systems with third-party services and platforms to enhance your business capabilities.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>
-            Our API integration services enable your software to communicate effectively with other platforms, providing smooth
-            data flow and enhancing overall functionality. Whether you need to integrate payment gateways, social media
-            platforms, or any other third-party APIs, we ensure a reliable and secure connection.
-          </p>
-        </CardContent>
-      </Card>
-    </section>
+    <div className="p-10">
+      <StickyScroll content={content} />
+    </div>
   );
 }

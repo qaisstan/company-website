@@ -15,17 +15,6 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-// Sample data - replace with actual data from your CMS or API
-const featuredPost = {
-  title: "The Future of Web Development: Trends to Watch in 2024",
-  excerpt:
-    "Explore the cutting-edge technologies and methodologies shaping the future of web development...",
-  image: "/placeholder.svg?height=400&width=800",
-  date: "2023-12-15",
-  category: "Development",
-  slug: "future-of-web-development-2024",
-};
-
 const categories = ["All", "Development", "Design", "Technology", "Business"];
 
 const recentPosts = [
@@ -82,41 +71,6 @@ export default function BlogPage() {
         transition={{ duration: 0.5 }}
         className="space-y-12"
       >
-        {/* Featured Post */}
-        <section>
-          <h2 className="text-3xl font-bold mb-6">Featured Post</h2>
-          <Card className="overflow-hidden">
-            <div className="relative h-64 md:h-96">
-              <Image
-                src={featuredPost.image}
-                alt={featuredPost.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <CardHeader>
-              <div className="flex justify-between items-center mb-2">
-                <Badge>{featuredPost.category}</Badge>
-                <div className="text-sm text-gray-500 flex items-center">
-                  <Calendar className="mr-1 h-4 w-4" />
-                  {new Date(featuredPost.date).toLocaleDateString()}
-                </div>
-              </div>
-              <CardTitle className="text-2xl md:text-3xl">
-                {featuredPost.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600">{featuredPost.excerpt}</p>
-            </CardContent>
-            <CardFooter>
-              <Link href={`/blog/${featuredPost.slug}`} passHref>
-                <Button>Read More</Button>
-              </Link>
-            </CardFooter>
-          </Card>
-        </section>
-
         {/* Categories */}
         <section>
           <h2 className="text-2xl font-bold mb-4">Categories</h2>
@@ -161,7 +115,7 @@ export default function BlogPage() {
                       <Badge>{post.category}</Badge>
                       <div className="text-sm text-gray-500 flex items-center">
                         <Calendar className="mr-1 h-4 w-4" />
-                        {new Date(post.date).toLocaleDateString()}
+                        {new Date(post.date).toLocaleDateString("en-US")}
                       </div>
                     </div>
                     <CardTitle className="text-xl">{post.title}</CardTitle>

@@ -17,6 +17,8 @@ import {
   Code,
   ChevronDown,
   Zap,
+  Repeat,
+  BarChart,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -41,6 +43,11 @@ const navItems = [
         icon: Zap,
       },
       {
+        name: "Automation",
+        href: "/services/automation",
+        icon: Repeat,
+      },
+      {
         name: "Web Development",
         href: "/services/web-development",
         icon: Globe,
@@ -60,6 +67,11 @@ const navItems = [
         name: "Full-Stack Application Development",
         href: "/services/full-stack-development",
         icon: Code,
+      },
+      {
+        name: "Analytics",
+        href: "/services/analytics",
+        icon: BarChart,
       },
     ],
   },

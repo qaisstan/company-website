@@ -6,72 +6,72 @@ import Image from "next/image";
 
 const content = [
   {
-    title: "Responsive Design",
+    title: "Collaborative Editing",
     description:
-      "Build websites that adapt seamlessly to any device, offering a great user experience across desktop, tablet, and mobile platforms.",
+      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/AI.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Responsive Design"
+          alt="Collaborative Editing"
         />
       </div>
     ),
   },
   {
-    title: "Custom Development",
+    title: "Real-Time Changes",
     description:
-      "Tailor-made solutions designed to meet your unique business needs, ensuring functionality and scalability.",
+      "See changes as they happen. Track every modification in real time and ensure alignment across your team without confusion or delays.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/AI.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Custom Development"
+          alt="Real-Time Changes"
         />
       </div>
     ),
   },
   {
-    title: "E-commerce Platforms",
+    title: "Version Control",
     description:
-      "Create robust and scalable online stores to enhance your sales and deliver a seamless shopping experience.",
+      "Eliminate the stress of version control. Stay updated with real-time versions of your project and maintain uninterrupted workflows.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/AI.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="E-commerce Platforms"
+          alt="Version Control"
         />
       </div>
     ),
   },
   {
-    title: "Website Maintenance",
+    title: "AI Features",
     description:
-      "Ensure your website remains up-to-date, secure, and optimized with our continuous support services.",
+      "Our AI solutions simplify complex tasks, offering intelligent insights to help you make data-driven decisions.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/AI.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Website Maintenance"
+          alt="AI Features"
         />
       </div>
     ),
   },
 ];
 
-export default function WebDevelopment() {
+export default function AiPage() {
   return (
     <div className="p-10">
       <StickyScroll content={content} />

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import {
   Globe,
@@ -19,48 +20,56 @@ const services = [
     description:
       "Implement advanced AI systems to automate tasks and unlock valuable insights.",
     icon: <Zap />,
+    link: "/services/ai",
   },
   {
     title: "Automation",
     description:
       "Simplify complex workflows with intelligent, automated solutions.",
     icon: <Repeat />,
+    link: "/services/automation",
   },
   {
     title: "Web Development",
     description:
       "Build fast, modern websites that provide seamless user experiences.",
     icon: <Globe />,
+    link: "/services/web-development",
   },
   {
     title: "API Integration",
     description:
       "Integrate external services to enhance your system's functionality.",
     icon: <Cpu />,
+    link: "/services/api-integration",
   },
   {
     title: "Cloud and Infrastructure",
     description:
       "Deploy scalable and secure cloud systems tailored to your needs.",
     icon: <Cloud />,
+    link: "/services/cloud-infrastructure",
   },
   {
     title: "SEO Optimization",
     description:
       "Boost your site's visibility with data-driven search optimization.",
     icon: <Search />,
+    link: "/services/seo-optimization",
   },
   {
     title: "Full-Stack Application Development",
     description:
       "Create feature-rich applications with a focus on performance and reliability.",
     icon: <Code />,
+    link: "/services/full-stack-development",
   },
   {
     title: "Analytics",
     description:
       "Transform your data into actionable insights with intuitive analytics tools.",
     icon: <BarChart />,
+    link: "/services/analytics",
   },
 ];
 
@@ -74,9 +83,10 @@ export default function AnimatedCardService() {
   );
 }
 
-const ServiceCard = ({ title, description, icon, index }) => {
+const ServiceCard = ({ title, description, icon, link, index }) => {
   return (
-    <div
+    <Link
+      href={link}
       className={cn(
         "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
@@ -101,6 +111,6 @@ const ServiceCard = ({ title, description, icon, index }) => {
       <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
         {description}
       </p>
-    </div>
+    </Link>
   );
 };

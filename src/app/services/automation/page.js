@@ -6,72 +6,72 @@ import Image from "next/image";
 
 const content = [
   {
-    title: "Responsive Design",
+    title: "Workflow Optimization",
     description:
-      "Build websites that adapt seamlessly to any device, offering a great user experience across desktop, tablet, and mobile platforms.",
+      "Streamline repetitive tasks and improve productivity with intelligent automation tailored to your needs.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/Automation.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Responsive Design"
+          alt="Workflow Optimization"
         />
       </div>
     ),
   },
   {
-    title: "Custom Development",
+    title: "Intelligent Task Management",
     description:
-      "Tailor-made solutions designed to meet your unique business needs, ensuring functionality and scalability.",
+      "Automate mundane tasks and focus on what matters most. Our solutions help you save time and resources.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/Automation.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Custom Development"
+          alt="Intelligent Task Management"
         />
       </div>
     ),
   },
   {
-    title: "E-commerce Platforms",
+    title: "Seamless Integration",
     description:
-      "Create robust and scalable online stores to enhance your sales and deliver a seamless shopping experience.",
+      "Integrate automation tools into your existing systems effortlessly, ensuring a smooth workflow.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/Automation.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="E-commerce Platforms"
+          alt="Seamless Integration"
         />
       </div>
     ),
   },
   {
-    title: "Website Maintenance",
+    title: "Scalable Automation",
     description:
-      "Ensure your website remains up-to-date, secure, and optimized with our continuous support services.",
+      "Build scalable automation processes that grow with your business and adapt to evolving needs.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/Webdevelopment.jpg"
+          src="/Automation.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="Website Maintenance"
+          alt="Scalable Automation"
         />
       </div>
     ),
   },
 ];
 
-export default function WebDevelopment() {
+export default function AutomationPage() {
   return (
     <div className="p-10">
       <StickyScroll content={content} />
