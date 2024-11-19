@@ -22,14 +22,14 @@ export default function Header() {
       <div className="flex items-center space-x-4">
         {mounted && (
           <Link href="/">
-            <Image
-              src={theme === "dark" ? "/logo-black.png" : "/logo-white.png"}
-              alt="Company Logo"
-              width={100} // Adjust width as needed
-              height={40} // Adjust height as needed
-              priority
-            />
-          </Link>
+          <Image
+            src={theme === "dark" ? "/logo-black.png" : "/logo-white.png"}
+            alt="Company Logo"
+            width={100} // Adjust width as needed
+            height={40} // Adjust height as needed
+            priority
+          />
+        </Link>
         )}
       </div>
 

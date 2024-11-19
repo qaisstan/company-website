@@ -76,7 +76,7 @@ const navItems = [
       },
     ],
   },
-  { name: "Blog", href: "/blog", icon: Newspaper },
+  //{ name: "Blog", href: "/blog", icon: Newspaper },
   { name: "About", href: "/about", icon: Users },
   { name: "Contact", href: "/contact", icon: PhoneCall },
 ];
