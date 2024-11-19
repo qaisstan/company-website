@@ -105,11 +105,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
@@ -138,7 +133,7 @@ export default function Footer() {
         <Separator className="my-8 bg-gray-700" />
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm">
-            © {currentYear} InnovateTech. All rights reserved.
+            © {currentYear} TRUSTON. All rights reserved.
           </div>
           <div className="flex space-x-4 text-sm">
             <Link href="#" className="hover:text-white transition-colors">
@@ -163,7 +158,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center">
             <Mail className="h-4 w-4 mr-2" />
-            <span>contact@innovatetech.com</span>
+            <span>contact@truston.dev</span>
           </div>
         </div>
       </div>
