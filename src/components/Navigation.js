@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -29,6 +29,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { DialogTitle } from "@/components/ui/dialog"; // Add this import for accessibility
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
@@ -81,15 +82,20 @@ const navItems = [
 ];
 
 export default function Navbar({ isMobile = false }) {
+  const [isSheetOpen, setSheetOpen] = useState(false);
+
   if (isMobile) {
     return (
-      <Sheet>
+      <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon">
             <Menu className="h-6 w-6" />
           </Button>
         </SheetTrigger>
         <SheetContent side="right">
+          {/* Add accessible title for SheetContent */}
+          <DialogTitle className="hidden">Navigation Menu</DialogTitle>
+
           <nav className="flex flex-col space-y-4">
             {navItems.map((item) => (
               <React.Fragment key={item.name}>
@@ -113,6 +119,7 @@ export default function Navbar({ isMobile = false }) {
                           <Link
                             href={dropdownItem.href}
                             className="flex items-center space-x-2"
+                            onClick={() => setSheetOpen(false)} // Close the Sheet on link click
                           >
                             <dropdownItem.icon className="h-4 w-4" />
                             <span>{dropdownItem.name}</span>
@@ -127,7 +134,10 @@ export default function Navbar({ isMobile = false }) {
                     asChild
                     className="flex items-center space-x-2 w-full justify-start"
                   >
-                    <Link href={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setSheetOpen(false)} // Close the Sheet on link click
+                    >
                       <item.icon className="h-4 w-4" />
                       <span>{item.name}</span>
                     </Link>

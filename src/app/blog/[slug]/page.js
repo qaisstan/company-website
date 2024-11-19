@@ -1,44 +1,78 @@
-import { recentPosts } from "@/app/data/posts";
 import { notFound } from "next/navigation";
 
-export default async function BlogPost({ params }) {
-  const { slug } = await params;
-  const post = recentPosts.find((p) => p.slug === slug);
+export async function generateStaticParams() {
+  try {
+    const response = await fetch("http://localhost:3000/api/posts", {
+      cache: "no-store",
+    });
 
-  if (!post) {
-    notFound(); // Handle 404 if post is not found
+    if (!response.ok) {
+      console.error(
+        `Failed to fetch posts: ${response.status} ${response.statusText}`
+      );
+      return [];
+    }
+
+    const posts = await response.json();
+
+    if (!Array.isArray(posts)) {
+      console.error("Posts API did not return an array.");
+      return [];
+    }
+
+    // Map slugs for static generation
+    return posts.map((post) => ({
+      slug: post.slug,
+    }));
+  } catch (error) {
+    console.error("Error generating static paths:", error);
+    return []; // Return an empty array to prevent build failures
   }
-
-  return (
-    <article className="container mx-auto px-4 py-16">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold">{post.title}</h1>
-        <p className="text-sm text-gray-500">
-          Published on {new Date(post.date).toLocaleDateString()}
-        </p>
-      </header>
-      <img
-        src={post.image}
-        alt={post.title}
-        className="w-full rounded-lg mb-8"
-      />
-      <section className="prose max-w-none mb-8">
-        <p>{post.excerpt}</p>
-        {/* Replace this content with the actual blog content */}
-        <p>
-          This is a placeholder for your blog content. Add affiliate links,
-          advertisements, or other monetization strategies here.
-        </p>
-      </section>
-      <footer>
-        <p className="text-gray-500 text-sm">Share this article!</p>
-      </footer>
-    </article>
-  );
 }
 
-export async function generateStaticParams() {
-  return recentPosts.map((post) => ({
-    slug: post.slug,
-  }));
+export default async function BlogPostPage({ params }) {
+  const { slug } = params;
+
+  if (!slug) {
+    console.error("Slug is missing from params.");
+    notFound();
+  }
+
+  try {
+    const response = await fetch("http://localhost:3000/api/posts", {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      console.error(
+        `Failed to fetch posts: ${response.status} ${response.statusText}`
+      );
+      notFound();
+    }
+
+    const posts = await response.json();
+
+    if (!Array.isArray(posts)) {
+      console.error("Posts API did not return an array.");
+      notFound();
+    }
+
+    const post = posts.find((p) => p.slug === slug);
+
+    if (!post) {
+      console.error(`Post not found for slug: ${slug}`);
+      notFound();
+    }
+
+    return (
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+        <p className="text-gray-600 mb-6">{post.excerpt}</p>
+        <p className="mt-6">{post.content}</p>
+      </div>
+    );
+  } catch (error) {
+    console.error("Error fetching post:", error);
+    notFound();
+  }
 }

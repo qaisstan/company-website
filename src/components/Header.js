@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import { ModeToggle } from "@/components/mode-toggle";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import Link from "next/link"; // Import Link from Next.js
 import { useEffect, useState } from "react";
 
 export default function Header() {
@@ -20,13 +21,15 @@ export default function Header() {
       {/* Company Logo */}
       <div className="flex items-center space-x-4">
         {mounted && (
-          <Image
-            src={theme === "dark" ? "/logo-black.png" : "/logo-white.png"}
-            alt="Company Logo"
-            width={100} // Adjust width as needed
-            height={40} // Adjust height as needed
-            priority
-          />
+          <Link href="/">
+            <Image
+              src={theme === "dark" ? "/logo-black.png" : "/logo-white.png"}
+              alt="Company Logo"
+              width={100} // Adjust width as needed
+              height={40} // Adjust height as needed
+              priority
+            />
+          </Link>
         )}
       </div>
 

@@ -30,20 +30,35 @@ export default function ContactPage() {
   const [service, setService] = useState("");
   const [otherService, setOtherService] = useState("");
   const [description, setDescription] = useState("");
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
-    console.log("Form submitted", {
-      email,
-      service: service === "Other" ? otherService : service,
-      description,
-    });
-    // Reset form fields after submission
-    setEmail("");
-    setService("");
-    setOtherService("");
-    setDescription("");
+    try {
+      const response = await fetch("http://localhost:3000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          service: service === "Other" ? otherService : service,
+          description,
+        }),
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        // Clear form after successful submission
+        setEmail("");
+        setService("");
+        setOtherService("");
+        setDescription("");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -54,6 +69,9 @@ export default function ContactPage() {
       className="container mx-auto px-4 py-12"
     >
       <h1 className="text-3xl font-bold mb-8 text-center">Contact Us</h1>
+      {success && (
+        <p className="text-green-500 text-center">Message sent successfully!</p>
+      )}
       <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6">
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
@@ -68,7 +86,7 @@ export default function ContactPage() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="service">Service Needed</Label>
-          <Select value={service} onValueChange={setService} required>
+          <Select value={service} onValueChange={setService}>
             <SelectTrigger id="service">
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
