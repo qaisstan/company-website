@@ -68,14 +68,14 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Us | TrustOn</title>
+        <title>Contact Us | TRUSTON</title>
         <meta
           name="description"
-          content="Get in touch with TrustOn for inquiries about web development, API integration, cloud solutions, SEO, and more."
+          content="Get in touch with TRUSTON for inquiries about web development, API integration, cloud solutions, SEO, and more."
         />
         <meta
           name="keywords"
-          content="TrustOn, contact, web development, API integration, cloud solutions, SEO"
+          content="TRUSTON, contact, web development, API integration, cloud solutions, SEO"
         />
       </Head>
       <motion.div

@@ -7,16 +7,16 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Us | TrustOn</title>
+        <title>About Us | TRUSTON</title>
         <meta
           name="description"
-          content="Learn more about TrustOn, your partner in AI, web development, automation, and cloud solutions. Empowering businesses globally since 2024."
+          content="Learn more about TRUSTON, your partner in AI, web development, automation, and cloud solutions. Empowering businesses globally since 2024."
         />
         <meta
           name="keywords"
-          content="TrustOn, AI solutions, web development, software development, automation, cloud solutions, custom software"
+          content="TRUSTON, AI solutions, web development, software development, automation, cloud solutions, custom software"
         />
-        <meta name="author" content="TrustOn" />
+        <meta name="author" content="TRUSTON" />
       </Head>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function AboutPage() {
         <h1 className="text-3xl font-bold mb-6 text-center">About Us</h1>
         <div className="space-y-6">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            At TrustOn, we&apos;re passionate about leveraging cutting-edge
+            At TRUSTON, we&apos;re passionate about leveraging cutting-edge
             technology to solve complex business challenges. Founded in 2024,
             we&apos;ve grown to become a trusted partner for businesses
             globally, delivering innovative software solutions tailored to their

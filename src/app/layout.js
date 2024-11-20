@@ -11,14 +11,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>TrustOn | Innovative Web Solutions for Your Business</title>
+        <title>TRUSTON | Innovative Web Solutions for Your Business</title>
         <meta
           name="description"
-          content="TrustOn delivers innovative web solutions including web development, automation, SEO optimization, and more. Experience fast, responsive, and user-friendly digital services tailored to your business needs."
+          content="TRUSTON delivers innovative web solutions including web development, automation, SEO optimization, and more. Experience fast, responsive, and user-friendly digital services tailored to your business needs."
         />
         <meta
           name="keywords"
-          content="TrustOn, web solutions, automation, SEO optimization, responsive design, cloud infrastructure, API integration, business services, innovative technology"
+          content="TRUSTON, web solutions, automation, SEO optimization, responsive design, cloud infrastructure, API integration, business services, innovative technology"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />

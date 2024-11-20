@@ -37,7 +37,7 @@ export default function AnimatedHeroSection() {
             >
               Empower your business with innovative software solutions designed
               to drive growth, enhance efficiency, and transform industries.
-              TrustOn is your partner in achieving digital excellence.
+              TRUSTON is your partner in achieving digital excellence.
             </motion.p>
 
             {/* Call-to-Actions */}

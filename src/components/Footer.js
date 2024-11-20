@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Branding Section */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-white">TrustOn</h2>
+            <h2 className="text-2xl font-bold text-white">TRUSTON</h2>
             <p className="text-sm">
               Empowering businesses with innovative solutions in web
               development, automation, SEO, and cloud infrastructure.

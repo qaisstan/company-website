@@ -10,14 +10,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>TrustOn | Empowering Businesses with Innovative Solutions</title>
+        <title>TRUSTON | Empowering Businesses with Innovative Solutions</title>
         <meta
           name="description"
-          content="Welcome to TrustOn! We provide cutting-edge services including web development, SEO optimization, cloud solutions, automation, and more to help your business thrive in the digital age."
+          content="Welcome to TRUSTON! We provide cutting-edge services including web development, SEO optimization, cloud solutions, automation, and more to help your business thrive in the digital age."
         />
         <meta
           name="keywords"
-          content="TrustOn, innovative business solutions, web development, SEO optimization, cloud solutions, automation services, full-stack development, API integration, business growth solutions"
+          content="TRUSTON, innovative business solutions, web development, SEO optimization, cloud solutions, automation services, full-stack development, API integration, business growth solutions"
         />
       </Head>
       <AnimatedHeroSection />

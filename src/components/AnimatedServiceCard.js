@@ -18,56 +18,56 @@ const services = [
   {
     title: "AI Solutions",
     description:
-      "Leverage advanced AI systems to automate tasks, optimize processes, and gain valuable insights. TrustOn delivers tailored AI solutions to meet your business needs.",
+      "Leverage advanced AI systems to automate tasks, optimize processes, and gain valuable insights. TRUSTON delivers tailored AI solutions to meet your business needs.",
     icon: <Zap />,
     link: "/services/ai",
   },
   {
     title: "Automation",
     description:
-      "Streamline complex workflows and improve efficiency with intelligent automation. Let TrustOn simplify your operations with scalable solutions.",
+      "Streamline complex workflows and improve efficiency with intelligent automation. Let TRUSTON simplify your operations with scalable solutions.",
     icon: <Repeat />,
     link: "/services/automation",
   },
   {
     title: "Web Development",
     description:
-      "Design and build fast, responsive, and modern websites that deliver exceptional user experiences across devices. Elevate your digital presence with TrustOn.",
+      "Design and build fast, responsive, and modern websites that deliver exceptional user experiences across devices. Elevate your digital presence with TRUSTON.",
     icon: <Globe />,
     link: "/services/web-development",
   },
   {
     title: "API Integration",
     description:
-      "Enhance functionality by integrating external APIs seamlessly into your systems. TrustOn ensures smooth connectivity for improved performance.",
+      "Enhance functionality by integrating external APIs seamlessly into your systems. TRUSTON ensures smooth connectivity for improved performance.",
     icon: <Cpu />,
     link: "/services/api-integration",
   },
   {
     title: "Cloud and Infrastructure",
     description:
-      "Deploy secure, scalable, and reliable cloud infrastructure solutions tailored to your business needs. TrustOn helps you harness the power of the cloud.",
+      "Deploy secure, scalable, and reliable cloud infrastructure solutions tailored to your business needs. TRUSTON helps you harness the power of the cloud.",
     icon: <Cloud />,
     link: "/services/cloud-infrastructure",
   },
   {
     title: "SEO Optimization",
     description:
-      "Boost your website's search engine visibility and drive traffic with data-driven SEO strategies. TrustOn ensures your site ranks higher and attracts the right audience.",
+      "Boost your website's search engine visibility and drive traffic with data-driven SEO strategies. TRUSTON ensures your site ranks higher and attracts the right audience.",
     icon: <Search />,
     link: "/services/seo-optimization",
   },
   {
     title: "Full-Stack Application Development",
     description:
-      "Develop feature-rich and high-performance full-stack applications tailored to your business needs. TrustOn specializes in reliable and scalable solutions.",
+      "Develop feature-rich and high-performance full-stack applications tailored to your business needs. TRUSTON specializes in reliable and scalable solutions.",
     icon: <Code />,
     link: "/services/full-stack-development",
   },
   {
     title: "Analytics",
     description:
-      "Transform raw data into actionable insights with intuitive and powerful analytics tools. TrustOn empowers your decision-making with data-driven strategies.",
+      "Transform raw data into actionable insights with intuitive and powerful analytics tools. TRUSTON empowers your decision-making with data-driven strategies.",
     icon: <BarChart />,
     link: "/services/analytics",
   },
