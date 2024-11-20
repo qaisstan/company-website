@@ -148,14 +148,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4 text-sm">
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <MapPin className="h-4 w-4 mr-2" />
             <span>123 Innovation Street, Tech City, TC 12345</span>
-          </div>
-          <div className="flex items-center">
+          </div> */}
+          {/* <div className="flex items-center">
             <Phone className="h-4 w-4 mr-2" />
             <span>+1 (555) 123-4567</span>
-          </div>
+          </div> */}
           <div className="flex items-center">
             <Mail className="h-4 w-4 mr-2" />
             <span>contact@truston.dev</span>
