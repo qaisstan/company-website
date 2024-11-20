@@ -3,12 +3,13 @@
 import React from "react";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
+import Head from "next/head";
 
 const content = [
   {
     title: "Seamless Integration",
     description:
-      "Connect your systems effortlessly with third-party APIs. Enhance your application's functionality with seamless integration solutions.",
+      "Easily connect your applications with third-party APIs to extend their functionality and improve user experience. TrustOn’s seamless integration services ensure smooth communication between systems, enabling you to integrate payment gateways, social media platforms, cloud services, and more. Our experts simplify the process, helping businesses streamline workflows, enhance operational efficiency, and unlock the full potential of their applications.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -24,7 +25,7 @@ const content = [
   {
     title: "Custom API Development",
     description:
-      "Build tailored APIs to meet your unique business needs. Our solutions ensure reliability and scalability.",
+      "Create APIs that are tailored to your business’s unique requirements. Whether you need APIs for mobile apps, web applications, or internal tools, TrustOn specializes in developing robust, scalable, and secure APIs. Our custom API solutions are designed to improve communication between systems, optimize performance, and provide flexibility for future growth. Ideal for industries like e-commerce, healthcare, SaaS, and financial services.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -38,9 +39,9 @@ const content = [
     ),
   },
   {
-    title: "Real-Time Data Sync",
+    title: "Real-Time Data Synchronization",
     description:
-      "Enable real-time data synchronization across platforms. Keep your systems updated with the latest information effortlessly.",
+      "Enable real-time data exchange between platforms with our data synchronization solutions. TrustOn ensures that your systems stay updated with the latest information, improving accuracy and efficiency. Real-time synchronization is crucial for businesses managing large-scale operations, inventory tracking, or financial transactions. Our solutions are designed to support fast, reliable data exchange across multiple applications, ensuring your business runs smoothly and without delays.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -56,7 +57,7 @@ const content = [
   {
     title: "API Security",
     description:
-      "Implement robust security protocols to protect sensitive data and ensure safe communication between systems.",
+      "Protect your sensitive data with TrustOn’s robust API security protocols. We implement advanced authentication, encryption, and threat detection systems to ensure that your APIs are safe from unauthorized access and breaches. Our security solutions are designed to safeguard communication between systems, giving businesses peace of mind. Whether you’re handling customer data, processing financial transactions, or managing internal communications, our API security solutions are tailored to meet the highest industry standards.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -73,8 +74,21 @@ const content = [
 
 export default function ApiIntegration() {
   return (
-    <div className="p-10">
-      <StickyScroll content={content} />
-    </div>
+    <>
+      <Head>
+        <title>API Integration Services | TrustOn</title>
+        <meta
+          name="description"
+          content="Explore TrustOn's API integration services, including seamless integration, custom API development, real-time data synchronization, and robust API security. Enhance your systems with cutting-edge solutions."
+        />
+        <meta
+          name="keywords"
+          content="API integration, custom API development, real-time data synchronization, API security, third-party API integration, secure APIs, data exchange solutions, API development services, TrustOn API solutions"
+        />
+      </Head>
+      <div className="p-10">
+        <StickyScroll content={content} />
+      </div>
+    </>
   );
 }

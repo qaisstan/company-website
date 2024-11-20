@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Vortex } from "./ui/vortex";
 import { useTheme } from "next-themes";
-import { ThemeProvider } from "./theme-provider";
 
 export default function AnimatedHeroSection() {
   const { theme } = useTheme();
+
   return (
-    <section className="w-full py-12 md:py-20 lg:py-25 xl:py-25 mb-8 md:mb-12 lg:mb-16 xl:mb-20 ">
+    <section className="w-full py-12 md:py-20 lg:py-25 xl:py-25 mb-8 md:mb-12 lg:mb-16 xl:mb-20">
       <Vortex removeBackground>
         <div className="container px-4 md:px-6">
           <motion.div
@@ -18,6 +18,7 @@ export default function AnimatedHeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
+            {/* Hero Title */}
             <motion.h1
               className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
               initial={{ opacity: 0 }}
@@ -26,16 +27,20 @@ export default function AnimatedHeroSection() {
             >
               Revolutionize Your Digital Landscape
             </motion.h1>
+
+            {/* Hero Subtitle */}
             <motion.p
               className="text-muted-foreground text-xl max-w-[600px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              Harness the power of cutting-edge software solutions to propel
-              your business into the future. We deliver innovative technologies
-              that transform industries.
+              Empower your business with innovative software solutions designed
+              to drive growth, enhance efficiency, and transform industries.
+              TrustOn is your partner in achieving digital excellence.
             </motion.p>
+
+            {/* Call-to-Actions */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 mt-8"
               initial={{ opacity: 0, y: 20 }}

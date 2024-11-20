@@ -18,56 +18,56 @@ const services = [
   {
     title: "AI Solutions",
     description:
-      "Implement advanced AI systems to automate tasks and unlock valuable insights.",
+      "Leverage advanced AI systems to automate tasks, optimize processes, and gain valuable insights. TrustOn delivers tailored AI solutions to meet your business needs.",
     icon: <Zap />,
     link: "/services/ai",
   },
   {
     title: "Automation",
     description:
-      "Simplify complex workflows with intelligent, automated solutions.",
+      "Streamline complex workflows and improve efficiency with intelligent automation. Let TrustOn simplify your operations with scalable solutions.",
     icon: <Repeat />,
     link: "/services/automation",
   },
   {
     title: "Web Development",
     description:
-      "Build fast, modern websites that provide seamless user experiences.",
+      "Design and build fast, responsive, and modern websites that deliver exceptional user experiences across devices. Elevate your digital presence with TrustOn.",
     icon: <Globe />,
     link: "/services/web-development",
   },
   {
     title: "API Integration",
     description:
-      "Integrate external services to enhance your system's functionality.",
+      "Enhance functionality by integrating external APIs seamlessly into your systems. TrustOn ensures smooth connectivity for improved performance.",
     icon: <Cpu />,
     link: "/services/api-integration",
   },
   {
     title: "Cloud and Infrastructure",
     description:
-      "Deploy scalable and secure cloud systems tailored to your needs.",
+      "Deploy secure, scalable, and reliable cloud infrastructure solutions tailored to your business needs. TrustOn helps you harness the power of the cloud.",
     icon: <Cloud />,
     link: "/services/cloud-infrastructure",
   },
   {
     title: "SEO Optimization",
     description:
-      "Boost your site's visibility with data-driven search optimization.",
+      "Boost your website's search engine visibility and drive traffic with data-driven SEO strategies. TrustOn ensures your site ranks higher and attracts the right audience.",
     icon: <Search />,
     link: "/services/seo-optimization",
   },
   {
     title: "Full-Stack Application Development",
     description:
-      "Create feature-rich applications with a focus on performance and reliability.",
+      "Develop feature-rich and high-performance full-stack applications tailored to your business needs. TrustOn specializes in reliable and scalable solutions.",
     icon: <Code />,
     link: "/services/full-stack-development",
   },
   {
     title: "Analytics",
     description:
-      "Transform your data into actionable insights with intuitive analytics tools.",
+      "Transform raw data into actionable insights with intuitive and powerful analytics tools. TrustOn empowers your decision-making with data-driven strategies.",
     icon: <BarChart />,
     link: "/services/analytics",
   },

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
+import Head from "next/head";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -31,11 +32,13 @@ export default function ContactPage() {
   const [otherService, setOtherService] = useState("");
   const [description, setDescription] = useState("");
   const [success, setSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage("");
     try {
-      const response = await fetch("http://localhost:3000/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -47,84 +50,112 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSuccess(true);
-        // Clear form after successful submission
+        setTimeout(() => setSuccess(false), 5000); // Remove success message after 5 seconds
         setEmail("");
         setService("");
         setOtherService("");
         setDescription("");
       } else {
-        alert("Failed to send message.");
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || "Failed to send message.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("An error occurred. Please try again.");
+      setErrorMessage("An error occurred. Please try again.");
     }
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="container mx-auto px-4 py-12"
-    >
-      <h1 className="text-3xl font-bold mb-8 text-center">Contact Us</h1>
-      {success && (
-        <p className="text-green-500 text-center">Message sent successfully!</p>
-      )}
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6">
-        <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
-          <Input
-            id="email"
-            type="email"
-            placeholder="your@email.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="service">Service Needed</Label>
-          <Select value={service} onValueChange={setService}>
-            <SelectTrigger id="service">
-              <SelectValue placeholder="Select a service" />
-            </SelectTrigger>
-            <SelectContent>
-              {services.map((s) => (
-                <SelectItem key={s} value={s}>
-                  {s}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-        {service === "Other" && (
+    <>
+      <Head>
+        <title>Contact Us | TrustOn</title>
+        <meta
+          name="description"
+          content="Get in touch with TrustOn for inquiries about web development, API integration, cloud solutions, SEO, and more."
+        />
+        <meta
+          name="keywords"
+          content="TrustOn, contact, web development, API integration, cloud solutions, SEO"
+        />
+      </Head>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="container mx-auto px-4 py-12"
+      >
+        <h1 className="text-3xl font-bold mb-8 text-center">Contact Us</h1>
+        {success && (
+          <p className="text-green-500 text-center" aria-live="polite">
+            Message sent successfully!
+          </p>
+        )}
+        {errorMessage && (
+          <p className="text-red-500 text-center" aria-live="polite">
+            {errorMessage}
+          </p>
+        )}
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="otherService">Specify Other Service</Label>
+            <Label htmlFor="email">Email</Label>
             <Input
-              id="otherService"
-              placeholder="Specify the service you need"
-              value={otherService}
-              onChange={(e) => setOtherService(e.target.value)}
+              id="email"
+              type="email"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
+              aria-required="true"
             />
           </div>
-        )}
-        <div className="space-y-2">
-          <Label htmlFor="description">Description</Label>
-          <Textarea
-            id="description"
-            placeholder="Tell us more about your project or inquiry"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            required
-          />
-        </div>
-        <Button type="submit" className="w-full">
-          <Send className="mr-2 h-4 w-4" /> Send Message
-        </Button>
-      </form>
-    </motion.div>
+          <div className="space-y-2">
+            <Label htmlFor="service">Service Needed</Label>
+            <Select
+              value={service}
+              onValueChange={setService}
+              aria-required="true"
+            >
+              <SelectTrigger id="service">
+                <SelectValue placeholder="Select a service" />
+              </SelectTrigger>
+              <SelectContent>
+                {services.map((s) => (
+                  <SelectItem key={s} value={s}>
+                    {s}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          {service === "Other" && (
+            <div className="space-y-2">
+              <Label htmlFor="otherService">Specify Other Service</Label>
+              <Input
+                id="otherService"
+                placeholder="Specify the service you need"
+                value={otherService}
+                onChange={(e) => setOtherService(e.target.value)}
+                required
+                aria-required="true"
+              />
+            </div>
+          )}
+          <div className="space-y-2">
+            <Label htmlFor="description">Description</Label>
+            <Textarea
+              id="description"
+              placeholder="Tell us more about your project or inquiry"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              required
+              aria-required="true"
+            />
+          </div>
+          <Button type="submit" className="w-full">
+            <Send className="mr-2 h-4 w-4" /> Send Message
+          </Button>
+        </form>
+      </motion.div>
+    </>
   );
 }

@@ -3,12 +3,13 @@
 import React from "react";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
+import Head from "next/head";
 
 const content = [
   {
     title: "Workflow Optimization",
     description:
-      "Streamline repetitive tasks and improve productivity with intelligent automation tailored to your needs.",
+      "Revolutionize your operations with TrustOn’s workflow optimization services. We use intelligent automation to streamline repetitive tasks, reduce human error, and improve productivity. From automating data entry to managing supply chains, our solutions are tailored to your unique needs. Ideal for industries like manufacturing, healthcare, retail, and logistics, workflow automation helps businesses save time, reduce costs, and focus on strategic goals.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -24,7 +25,7 @@ const content = [
   {
     title: "Intelligent Task Management",
     description:
-      "Automate mundane tasks and focus on what matters most. Our solutions help you save time and resources.",
+      "Automate repetitive and mundane tasks with TrustOn’s intelligent task management solutions. Free up valuable time and resources, allowing your team to focus on high-value activities. Whether it’s automating email responses, scheduling, or inventory updates, our automation tools are designed to increase efficiency. This is perfect for businesses in customer service, e-commerce, and administration that want to improve operations without increasing workload.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -40,7 +41,7 @@ const content = [
   {
     title: "Seamless Integration",
     description:
-      "Integrate automation tools into your existing systems effortlessly, ensuring a smooth workflow.",
+      "Integrate advanced automation tools into your existing systems with ease. TrustOn ensures a seamless connection between automation workflows and your current technology stack, including CRMs, ERPs, and cloud platforms. By ensuring smooth integration, we help businesses reduce downtime and ensure consistent performance. Perfect for enterprises looking to enhance operational efficiency without overhauling their systems.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -56,7 +57,7 @@ const content = [
   {
     title: "Scalable Automation",
     description:
-      "Build scalable automation processes that grow with your business and adapt to evolving needs.",
+      "Future-proof your operations with scalable automation solutions from TrustOn. As your business grows, our automation processes adapt to your evolving needs, ensuring continuous efficiency. From small businesses to large enterprises, our solutions are built to handle increasing complexity and volume. Whether you’re scaling production, managing a growing customer base, or expanding globally, TrustOn’s scalable automation is your reliable partner in growth.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -73,8 +74,21 @@ const content = [
 
 export default function AutomationPage() {
   return (
-    <div className="p-10">
-      <StickyScroll content={content} />
-    </div>
+    <>
+      <Head>
+        <title>Automation Services | TrustOn</title>
+        <meta
+          name="description"
+          content="Discover TrustOn's automation services, including workflow optimization, task management, seamless integration, and scalable solutions. Automate processes and enhance efficiency."
+        />
+        <meta
+          name="keywords"
+          content="automation services, workflow optimization, intelligent task management, seamless integration, scalable automation, business automation, TrustOn automation tools, process automation solutions"
+        />
+      </Head>
+      <div className="p-10">
+        <StickyScroll content={content} />
+      </div>
+    </>
   );
 }

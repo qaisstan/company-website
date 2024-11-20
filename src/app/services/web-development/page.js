@@ -3,12 +3,13 @@
 import React from "react";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
+import Head from "next/head";
 
 const content = [
   {
     title: "Responsive Design",
     description:
-      "Build websites that adapt seamlessly to any device, offering a great user experience across desktop, tablet, and mobile platforms.",
+      "Deliver exceptional user experiences with TrustOn’s responsive web design services. We build websites that adapt seamlessly to any device, including desktops, tablets, and mobile platforms. Our designs ensure optimal performance, fast loading times, and intuitive navigation, meeting the demands of modern users. Perfect for businesses aiming to engage their audience across diverse devices and platforms, our responsive designs boost usability and accessibility.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -24,7 +25,7 @@ const content = [
   {
     title: "Custom Development",
     description:
-      "Tailor-made solutions designed to meet your unique business needs, ensuring functionality and scalability.",
+      "Transform your ideas into reality with TrustOn’s custom web development solutions. Our team creates tailor-made websites that align with your unique business goals, ensuring functionality, scalability, and a seamless user experience. Whether you need a dynamic web application, a feature-rich corporate website, or custom integrations, our solutions are built to meet the highest standards. Ideal for businesses seeking bespoke solutions to differentiate themselves in competitive markets.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -40,7 +41,7 @@ const content = [
   {
     title: "E-commerce Platforms",
     description:
-      "Create robust and scalable online stores to enhance your sales and deliver a seamless shopping experience.",
+      "Boost your online sales with TrustOn’s robust and scalable e-commerce platforms. We design and develop online stores that provide a seamless shopping experience, from product browsing to secure checkout. Our solutions include custom features like inventory management, payment gateway integration, and personalized shopping experiences, tailored to your industry and customer needs. Perfect for retailers, startups, and enterprises looking to grow their online presence and maximize conversions.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -56,7 +57,7 @@ const content = [
   {
     title: "Website Maintenance",
     description:
-      "Ensure your website remains up-to-date, secure, and optimized with our continuous support services.",
+      "Keep your website running smoothly with TrustOn’s website maintenance services. We provide ongoing support to ensure your site remains secure, up-to-date, and optimized for performance. From regular updates and backups to performance monitoring and bug fixes, our maintenance services are designed to give you peace of mind. Perfect for businesses looking to focus on growth while leaving the technical details to experts.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -73,8 +74,21 @@ const content = [
 
 export default function WebDevelopment() {
   return (
-    <div className="p-10">
-      <StickyScroll content={content} />
-    </div>
+    <>
+      <Head>
+        <title>Web Development Services | TrustOn</title>
+        <meta
+          name="description"
+          content="Explore TrustOn's web development services, including responsive design, custom development, e-commerce platforms, and website maintenance. Build, grow, and optimize your online presence with expert solutions."
+        />
+        <meta
+          name="keywords"
+          content="web development, responsive design, custom development, e-commerce platforms, website maintenance, web solutions, TrustOn web services, build online presence, optimize website"
+        />
+      </Head>
+      <div className="p-10">
+        <StickyScroll content={content} />
+      </div>
+    </>
   );
 }

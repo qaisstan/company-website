@@ -7,7 +7,6 @@ import {
   Menu,
   Home,
   Briefcase,
-  Newspaper,
   Users,
   Globe,
   Cpu,
@@ -29,7 +28,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { DialogTitle } from "@/components/ui/dialog"; // Add this import for accessibility
+import { DialogTitle } from "@/components/ui/dialog";
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
@@ -38,16 +37,8 @@ const navItems = [
     href: "/services",
     icon: Briefcase,
     dropdownItems: [
-      {
-        name: "AI",
-        href: "/services/ai",
-        icon: Zap,
-      },
-      {
-        name: "Automation",
-        href: "/services/automation",
-        icon: Repeat,
-      },
+      { name: "AI", href: "/services/ai", icon: Zap },
+      { name: "Automation", href: "/services/automation", icon: Repeat },
       {
         name: "Web Development",
         href: "/services/web-development",
@@ -69,14 +60,9 @@ const navItems = [
         href: "/services/full-stack-development",
         icon: Code,
       },
-      {
-        name: "Analytics",
-        href: "/services/analytics",
-        icon: BarChart,
-      },
+      { name: "Analytics", href: "/services/analytics", icon: BarChart },
     ],
   },
-  //{ name: "Blog", href: "/blog", icon: Newspaper },
   { name: "About", href: "/about", icon: Users },
   { name: "Contact", href: "/contact", icon: PhoneCall },
 ];
@@ -89,13 +75,11 @@ export default function Navbar({ isMobile = false }) {
       <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon">
-            <Menu className="h-6 w-6" />
+            <Menu className="h-6 w-6" aria-label="Menu" />
           </Button>
         </SheetTrigger>
         <SheetContent side="right">
-          {/* Add accessible title for SheetContent */}
-          <DialogTitle className="hidden">Navigation Menu</DialogTitle>
-
+          <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
           <nav className="flex flex-col space-y-4">
             {navItems.map((item) => (
               <React.Fragment key={item.name}>
@@ -119,7 +103,7 @@ export default function Navbar({ isMobile = false }) {
                           <Link
                             href={dropdownItem.href}
                             className="flex items-center space-x-2"
-                            onClick={() => setSheetOpen(false)} // Close the Sheet on link click
+                            onClick={() => setSheetOpen(false)}
                           >
                             <dropdownItem.icon className="h-4 w-4" />
                             <span>{dropdownItem.name}</span>
@@ -134,10 +118,7 @@ export default function Navbar({ isMobile = false }) {
                     asChild
                     className="flex items-center space-x-2 w-full justify-start"
                   >
-                    <Link
-                      href={item.href}
-                      onClick={() => setSheetOpen(false)} // Close the Sheet on link click
-                    >
+                    <Link href={item.href} onClick={() => setSheetOpen(false)}>
                       <item.icon className="h-4 w-4" />
                       <span>{item.name}</span>
                     </Link>

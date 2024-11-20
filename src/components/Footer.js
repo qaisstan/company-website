@@ -2,15 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, Mail } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,11 +20,12 @@ export default function Footer() {
     >
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Branding Section */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-white">TrustOn</h2>
             <p className="text-sm">
-              Empowering businesses through innovative software solutions and
-              cutting-edge technology.
+              Empowering businesses with innovative solutions in web
+              development, automation, SEO, and cloud infrastructure.
             </p>
             <div className="flex space-x-4">
               <Link href="#" aria-label="Facebook">
@@ -49,6 +42,8 @@ export default function Footer() {
               </Link>
             </div>
           </div>
+
+          {/* Services Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-2">
@@ -95,28 +90,45 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Company Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                  href="/about-us"
+                  className="hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
+              <li>
+                {/* <Link
+                  href="/blog"
+                  className="hover:text-white transition-colors"
+                >
+                  Blog
+                </Link> */}
+              </li>
             </ul>
           </div>
+
+          {/* Newsletter Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">
               Stay Updated
             </h3>
             <p className="text-sm mb-4">
-              Subscribe to our newsletter for the latest updates and
-              innovations.
+              Subscribe to our newsletter to receive the latest updates and
+              industry insights.
             </p>
             <form className="space-y-2">
               <Input
@@ -130,32 +142,37 @@ export default function Footer() {
             </form>
           </div>
         </div>
+
         <Separator className="my-8 bg-gray-700" />
+
+        {/* Footer Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm">
             © {currentYear} TRUSTON. All rights reserved.
           </div>
           <div className="flex space-x-4 text-sm">
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link
+              href="/privacy-policy"
+              className="hover:text-white transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link
+              href="/terms-of-service"
+              className="hover:text-white transition-colors"
+            >
               Terms of Service
             </Link>
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link
+              href="/cookie-policy"
+              className="hover:text-white transition-colors"
+            >
               Cookie Policy
             </Link>
           </div>
         </div>
+
         <div className="mt-8 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4 text-sm">
-          {/* <div className="flex items-center">
-            <MapPin className="h-4 w-4 mr-2" />
-            <span>123 Innovation Street, Tech City, TC 12345</span>
-          </div> */}
-          {/* <div className="flex items-center">
-            <Phone className="h-4 w-4 mr-2" />
-            <span>+1 (555) 123-4567</span>
-          </div> */}
           <div className="flex items-center">
             <Mail className="h-4 w-4 mr-2" />
             <span>contact@truston.dev</span>
