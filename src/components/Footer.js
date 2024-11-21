@@ -45,17 +45,20 @@ export default function Footer() {
               </li>
             </ul>
             <div className="flex space-x-4">
-              <Link href="#" aria-label="Facebook">
+              {/* <Link href="#" aria-label="Facebook">
                 <Facebook className="h-6 w-6 hover:text-blue-400 transition-colors" />
               </Link>
               <Link href="#" aria-label="Twitter">
                 <Twitter className="h-6 w-6 hover:text-blue-400 transition-colors" />
               </Link>
-              <Link href="#" aria-label="LinkedIn">
-                <Linkedin className="h-6 w-6 hover:text-blue-400 transition-colors" />
-              </Link>
               <Link href="#" aria-label="Instagram">
                 <Instagram className="h-6 w-6 hover:text-blue-400 transition-colors" />
+              </Link> */}
+              <Link
+                href="https://www.linkedin.com/company/truston-dev/"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-6 w-6 hover:text-blue-400 transition-colors" />
               </Link>
             </div>
           </div>
