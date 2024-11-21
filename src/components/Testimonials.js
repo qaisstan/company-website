@@ -9,35 +9,26 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Alice Johnson",
-    role: "CTO, TechCorp",
+    name: "Mansoor Najmee",
+    role: "CTO, Najme.com",
     content:
-      "The software solutions provided by this company have revolutionized our operations. Their expertise in API integration saved us countless hours of work.",
-    avatar: "/placeholder.svg?height=80&width=80",
+      "Their API integration streamlined our processes and saved us a ton of time.",
+    avatar: "/placeholder.jpg",
   },
   {
     id: 2,
-    name: "Bob Smith",
-    role: "Founder, StartupX",
+    name: "Josef Ahmadi",
+    role: "Founder, StartupCrypto",
     content:
-      "Their full-stack development capabilities are unmatched. They delivered a complex application that exceeded our expectations, on time and within budget.",
-    avatar: "/placeholder.svg?height=80&width=80",
+      "They delivered a complex app on time, and it works perfectly for our needs.",
+    avatar: "/placeholder.jpg",
   },
   {
     id: 3,
     name: "Carol Davis",
     role: "Marketing Director, GrowthCo",
-    content:
-      "The SEO optimization services dramatically improved our online visibility. We've seen a 200% increase in organic traffic since working with them.",
-    avatar: "/placeholder.svg?height=80&width=80",
-  },
-  {
-    id: 4,
-    name: "David Wilson",
-    role: "Lead Developer, InnovateTech",
-    content:
-      "Their cloud infrastructure solutions have been a game-changer for us. We've significantly reduced costs while improving performance and scalability.",
-    avatar: "/placeholder.svg?height=80&width=80",
+    content: "The SEO optimization services improved our online visibility.",
+    avatar: "/placeholder.jpg",
   },
 ];
 

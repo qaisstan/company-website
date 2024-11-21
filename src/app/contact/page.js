@@ -27,6 +27,7 @@ const services = [
 ];
 
 export default function ContactPage() {
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [service, setService] = useState("");
   const [otherService, setOtherService] = useState("");
@@ -97,6 +98,16 @@ export default function ContactPage() {
         )}
         <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6">
           <div className="space-y-2">
+            <Label htmlFor="fullName">Full Name</Label>
+            <Input
+              id="fullName"
+              type="fullName"
+              placeholder="John Doe"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              required
+              aria-required="true"
+            />
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"

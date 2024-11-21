@@ -4,9 +4,17 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Vortex } from "./ui/vortex";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function AnimatedHeroSection() {
   const { theme } = useTheme();
+
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("services");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="w-full py-12 md:py-20 lg:py-25 xl:py-25 mb-8 md:mb-12 lg:mb-16 xl:mb-20">
@@ -25,19 +33,18 @@ export default function AnimatedHeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              Revolutionize Your Digital Landscape
+              Practical Solutions for Everyday Challenges
             </motion.h1>
 
             {/* Hero Subtitle */}
             <motion.p
-              className="text-muted-foreground text-xl max-w-[600px]"
+              className=" text-xl max-w-[600px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              Empower your business with innovative software solutions designed
-              to drive growth, enhance efficiency, and transform industries.
-              TRUSTON is your partner in achieving digital excellence.
+              We create software that solves problems, saves time, and makes
+              complex tasks easier to manage.
             </motion.p>
 
             {/* Call-to-Actions */}
@@ -50,11 +57,12 @@ export default function AnimatedHeroSection() {
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
+                onClick={scrollToServices}
               >
                 Explore Solutions
               </Button>
               <Button variant="outline" size="lg">
-                Get a Free Consultation
+                <Link href="/contact">Get a Free Consultation</Link>
               </Button>
             </motion.div>
           </motion.div>

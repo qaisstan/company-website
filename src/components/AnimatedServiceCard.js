@@ -18,56 +18,55 @@ const services = [
   {
     title: "AI Solutions",
     description:
-      "Leverage advanced AI systems to automate tasks, optimize processes, and gain valuable insights. TRUSTON delivers tailored AI solutions to meet your business needs.",
+      "Build smarter systems that automate tasks, improve processes, and provide insights to help you make better decisions.",
     icon: <Zap />,
     link: "/services/ai",
   },
   {
     title: "Automation",
     description:
-      "Streamline complex workflows and improve efficiency with intelligent automation. Let TRUSTON simplify your operations with scalable solutions.",
+      "Make your workflows more efficient and save time by automating repetitive and complex tasks.",
     icon: <Repeat />,
     link: "/services/automation",
   },
   {
     title: "Web Development",
     description:
-      "Design and build fast, responsive, and modern websites that deliver exceptional user experiences across devices. Elevate your digital presence with TRUSTON.",
+      "Create modern, responsive websites that look great and work seamlessly on any device.",
     icon: <Globe />,
     link: "/services/web-development",
   },
   {
     title: "API Integration",
     description:
-      "Enhance functionality by integrating external APIs seamlessly into your systems. TRUSTON ensures smooth connectivity for improved performance.",
+      "Connect your systems with external services to enhance functionality and ensure everything works smoothly together.",
     icon: <Cpu />,
     link: "/services/api-integration",
   },
   {
     title: "Cloud and Infrastructure",
     description:
-      "Deploy secure, scalable, and reliable cloud infrastructure solutions tailored to your business needs. TRUSTON helps you harness the power of the cloud.",
+      "Set up secure and scalable cloud solutions that keep your data accessible and your operations reliable.",
     icon: <Cloud />,
     link: "/services/cloud-infrastructure",
   },
   {
     title: "SEO Optimization",
     description:
-      "Boost your website's search engine visibility and drive traffic with data-driven SEO strategies. TRUSTON ensures your site ranks higher and attracts the right audience.",
+      "Improve your website’s visibility in search results to help more people find and connect with your business.",
     icon: <Search />,
     link: "/services/seo-optimization",
   },
   {
     title: "Full-Stack Application Development",
     description:
-      "Develop feature-rich and high-performance full-stack applications tailored to your business needs. TRUSTON specializes in reliable and scalable solutions.",
-    icon: <Code />,
+      "Build reliable applications that handle both front-end and back-end needs effectively.",
     link: "/services/full-stack-development",
   },
   {
     title: "Analytics",
     description:
-      "Transform raw data into actionable insights with intuitive and powerful analytics tools. TRUSTON empowers your decision-making with data-driven strategies.",
+      "Turn your data into clear, actionable insights that make it easier to plan and grow.",
     icon: <BarChart />,
     link: "/services/analytics",
   },

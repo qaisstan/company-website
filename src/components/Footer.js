@@ -19,14 +19,31 @@ export default function Footer() {
       className="bg-gray-900 text-gray-300"
     >
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Branding Section */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-white">TRUSTON</h2>
             <p className="text-sm">
-              Empowering businesses with innovative solutions in web
-              development, automation, SEO, and cloud infrastructure.
+              Practical Solutions for Everyday Challenges
             </p>
+            <ul className="space-y-2 mt-4">
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
             <div className="flex space-x-4">
               <Link href="#" aria-label="Facebook">
                 <Facebook className="h-6 w-6 hover:text-blue-400 transition-colors" />
@@ -47,6 +64,22 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/services/ai"
+                  className="hover:text-white transition-colors"
+                >
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/automation"
+                  className="hover:text-white transition-colors"
+                >
+                  Automation
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/services/web-development"
@@ -87,36 +120,13 @@ export default function Footer() {
                   Full-Stack Application Development
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Company Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
-            <ul className="space-y-2">
               <li>
                 <Link
-                  href="/about-us"
+                  href="/services/analytics"
                   className="hover:text-white transition-colors"
                 >
-                  About Us
+                  Analytics
                 </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                {/* <Link
-                  href="/blog"
-                  className="hover:text-white transition-colors"
-                >
-                  Blog
-                </Link> */}
               </li>
             </ul>
           </div>
@@ -157,12 +167,12 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
-            <Link
+            {/* <Link
               href="/terms-of-service"
               className="hover:text-white transition-colors"
             >
               Terms of Service
-            </Link>
+            </Link> */}
             <Link
               href="/cookie-policy"
               className="hover:text-white transition-colors"

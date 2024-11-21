@@ -1,41 +1,39 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const { email, service, description } = req.body;
+  if (req.method !== "POST") {
+    return res.status(405).send({ message: "Only POST requests allowed" });
+  }
 
+  const { email, service, description } = req.body;
+
+  if (!email || !service || !description) {
+    return res.status(400).send({ message: "All fields are required" });
+  }
+
+  try {
+    // Configure Nodemailer with Zoho SMTP
     const transporter = nodemailer.createTransport({
       host: "smtp.zoho.com",
-      port: 465, // SSL
-      secure: true, // Use SSL
+      port: 465,
+      secure: true, // Use TLS
       auth: {
-        user: "contact@truston.dev", // Your Zoho email
-        pass: "your-zoho-password", // Your Zoho app-specific password
+        user: "your-email@yourdomain.com", // Your Zoho email
+        pass: "your-app-password", // App-specific password
       },
     });
 
-    try {
-      // Send email
-      await transporter.sendMail({
-        from: "contact@truston.dev", // From your Zoho email
-        to: "contact@truston.dev", // Where inquiries are sent
-        subject: `New Inquiry from ${email}`,
-        html: `
-          <h2>New Inquiry</h2>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Service:</strong> ${service}</p>
-          <p><strong>Description:</strong></p>
-          <p>${description}</p>
-        `,
-      });
+    // Email details
+    await transporter.sendMail({
+      from: `"TRUSTON Contact Form" <your-email@yourdomain.com>`, // Sender address
+      to: "your-email@yourdomain.com", // Replace with your email
+      subject: `New Contact Form Submission - ${service}`,
+      text: `You received a new message from ${email}.\n\nService: ${service}\n\nMessage:\n${description}`,
+    });
 
-      res.status(200).json({ message: "Email sent successfully!" });
-    } catch (error) {
-      console.error("Error sending email:", error);
-      res.status(500).json({ error: "Failed to send email." });
-    }
-  } else {
-    res.setHeader("Allow", ["POST"]);
-    res.status(405).json({ error: `Method ${req.method} not allowed` });
+    res.status(200).send({ message: "Email sent successfully" });
+  } catch (error) {
+    console.error("Email sending error:", error);
+    res.status(500).send({ message: "Failed to send email" });
   }
 }

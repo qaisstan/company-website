@@ -21,7 +21,9 @@ export default function Home() {
         />
       </Head>
       <AnimatedHeroSection />
-      <AnimatedServiceCards />
+      <section id="services">
+        <AnimatedServiceCards />
+      </section>
       <EnhancedAnimatedTestimonials />
     </>
   );

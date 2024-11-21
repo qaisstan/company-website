@@ -27,24 +27,21 @@ export default function AboutPage() {
         <h1 className="text-3xl font-bold mb-6 text-center">About Us</h1>
         <div className="space-y-6">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            At TRUSTON, we&apos;re passionate about leveraging cutting-edge
-            technology to solve complex business challenges. Founded in 2024,
-            we&apos;ve grown to become a trusted partner for businesses
-            globally, delivering innovative software solutions tailored to their
-            needs.
+            At TRUSTON, we focus on using technology to make things easier for
+            businesses. Since 2024, we’ve been working with companies of all
+            sizes, creating software that solves problems and improves how
+            things work.
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Our team of expert developers, designers, and strategists work
-            tirelessly to deliver solutions that drive growth and efficiency for
-            our clients. We specialize in AI integration, web development, cloud
-            infrastructure, and custom software development.
+            Our team builds tools for tasks like AI integration, web
+            development, cloud infrastructure, and software tailored to specific
+            needs. We aim to create solutions that are practical, efficient, and
+            fit naturally into the way businesses operate.
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground">
-            With a focus on quality, creativity, and client satisfaction,
-            we&apos;ve built a reputation for excellence in the tech industry.
-            Our commitment to staying at the forefront of technological
-            advancements ensures that our clients always receive
-            state-of-the-art solutions.
+            We prioritize quality and thoughtful design in everything we do,
+            staying up-to-date with the latest technology to deliver work we can
+            be proud of—and that our clients find genuinely useful.
           </p>
           <div className="pt-6 flex justify-center">
             <a
