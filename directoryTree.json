@@ -1,0 +1,426 @@
+{
+  "path": "./",
+  "name": ".",
+  "children": [
+    {
+      "path": ".DS_Store",
+      "name": ".DS_Store"
+    },
+    {
+      "path": ".env.local",
+      "name": ".env.local"
+    },
+    {
+      "path": ".eslintrc.json",
+      "name": ".eslintrc.json"
+    },
+    {
+      "path": "README.md",
+      "name": "README.md"
+    },
+    {
+      "path": "components.json",
+      "name": "components.json"
+    },
+    {
+      "path": "directoryTree.json",
+      "name": "directoryTree.json"
+    },
+    {
+      "path": "generateTree.js",
+      "name": "generateTree.js"
+    },
+    {
+      "path": "jsconfig.json",
+      "name": "jsconfig.json"
+    },
+    {
+      "path": "next.config.mjs",
+      "name": "next.config.mjs"
+    },
+    {
+      "path": "package-lock.json",
+      "name": "package-lock.json"
+    },
+    {
+      "path": "package.json",
+      "name": "package.json"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "name": "postcss.config.mjs"
+    },
+    {
+      "path": "src",
+      "name": "src",
+      "children": [
+        {
+          "path": "src/.DS_Store",
+          "name": ".DS_Store"
+        },
+        {
+          "path": "src/actions",
+          "name": "actions",
+          "children": [
+            {
+              "path": "src/actions/contact.js",
+              "name": "contact.js"
+            }
+          ]
+        },
+        {
+          "path": "src/app",
+          "name": "app",
+          "children": [
+            {
+              "path": "src/app/about",
+              "name": "about",
+              "children": [
+                {
+                  "path": "src/app/about/page.js",
+                  "name": "page.js"
+                }
+              ]
+            },
+            {
+              "path": "src/app/api",
+              "name": "api",
+              "children": [
+                {
+                  "path": "src/app/api/contact",
+                  "name": "contact"
+                },
+                {
+                  "path": "src/app/api/posts",
+                  "name": "posts"
+                }
+              ]
+            },
+            {
+              "path": "src/app/blog",
+              "name": "blog",
+              "children": [
+                {
+                  "path": "src/app/blog/[slug]",
+                  "name": "[slug]"
+                },
+                {
+                  "path": "src/app/blog/page.js",
+                  "name": "page.js"
+                }
+              ]
+            },
+            {
+              "path": "src/app/contact",
+              "name": "contact",
+              "children": [
+                {
+                  "path": "src/app/contact/page.js",
+                  "name": "page.js"
+                }
+              ]
+            },
+            {
+              "path": "src/app/cookie-policy",
+              "name": "cookie-policy",
+              "children": [
+                {
+                  "path": "src/app/cookie-policy/page.js",
+                  "name": "page.js"
+                }
+              ]
+            },
+            {
+              "path": "src/app/data",
+              "name": "data",
+              "children": [
+                {
+                  "path": "src/app/data/posts.js",
+                  "name": "posts.js"
+                }
+              ]
+            },
+            {
+              "path": "src/app/favicon.ico",
+              "name": "favicon.ico"
+            },
+            {
+              "path": "src/app/globals.css",
+              "name": "globals.css"
+            },
+            {
+              "path": "src/app/layout-client.js",
+              "name": "layout-client.js"
+            },
+            {
+              "path": "src/app/layout.js",
+              "name": "layout.js"
+            },
+            {
+              "path": "src/app/models",
+              "name": "models",
+              "children": [
+                {
+                  "path": "src/app/models/blogPost.js",
+                  "name": "blogPost.js"
+                },
+                {
+                  "path": "src/app/models/contact.js",
+                  "name": "contact.js"
+                }
+              ]
+            },
+            {
+              "path": "src/app/page.js",
+              "name": "page.js"
+            },
+            {
+              "path": "src/app/privacy-policy",
+              "name": "privacy-policy",
+              "children": [
+                {
+                  "path": "src/app/privacy-policy/page.js",
+                  "name": "page.js"
+                }
+              ]
+            },
+            {
+              "path": "src/app/services",
+              "name": "services",
+              "children": [
+                {
+                  "path": "src/app/services/ai",
+                  "name": "ai"
+                },
+                {
+                  "path": "src/app/services/analytics",
+                  "name": "analytics"
+                },
+                {
+                  "path": "src/app/services/api-integration",
+                  "name": "api-integration"
+                },
+                {
+                  "path": "src/app/services/automation",
+                  "name": "automation"
+                },
+                {
+                  "path": "src/app/services/cloud-infrastructure",
+                  "name": "cloud-infrastructure"
+                },
+                {
+                  "path": "src/app/services/full-stack-development",
+                  "name": "full-stack-development"
+                },
+                {
+                  "path": "src/app/services/page.js",
+                  "name": "page.js"
+                },
+                {
+                  "path": "src/app/services/seo-optimization",
+                  "name": "seo-optimization"
+                },
+                {
+                  "path": "src/app/services/web-development",
+                  "name": "web-development"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "src/components",
+          "name": "components",
+          "children": [
+            {
+              "path": "src/components/AnimatedServiceCard.js",
+              "name": "AnimatedServiceCard.js"
+            },
+            {
+              "path": "src/components/CookieBanner.js",
+              "name": "CookieBanner.js"
+            },
+            {
+              "path": "src/components/Footer.js",
+              "name": "Footer.js"
+            },
+            {
+              "path": "src/components/Header.js",
+              "name": "Header.js"
+            },
+            {
+              "path": "src/components/HeroSection.js",
+              "name": "HeroSection.js"
+            },
+            {
+              "path": "src/components/Navigation.js",
+              "name": "Navigation.js"
+            },
+            {
+              "path": "src/components/Testimonials.js",
+              "name": "Testimonials.js"
+            },
+            {
+              "path": "src/components/blog",
+              "name": "blog",
+              "children": [
+                {
+                  "path": "src/components/blog/BlogCard.js",
+                  "name": "BlogCard.js"
+                },
+                {
+                  "path": "src/components/blog/BlogFilter.js",
+                  "name": "BlogFilter.js"
+                },
+                {
+                  "path": "src/components/blog/BlogPagination.js",
+                  "name": "BlogPagination.js"
+                }
+              ]
+            },
+            {
+              "path": "src/components/mode-toggle.js",
+              "name": "mode-toggle.js"
+            },
+            {
+              "path": "src/components/theme-provider.js",
+              "name": "theme-provider.js"
+            },
+            {
+              "path": "src/components/ui",
+              "name": "ui",
+              "children": [
+                {
+                  "path": "src/components/ui/alert-dialog.jsx",
+                  "name": "alert-dialog.jsx"
+                },
+                {
+                  "path": "src/components/ui/avatar.jsx",
+                  "name": "avatar.jsx"
+                },
+                {
+                  "path": "src/components/ui/badge.jsx",
+                  "name": "badge.jsx"
+                },
+                {
+                  "path": "src/components/ui/button.jsx",
+                  "name": "button.jsx"
+                },
+                {
+                  "path": "src/components/ui/card.jsx",
+                  "name": "card.jsx"
+                },
+                {
+                  "path": "src/components/ui/dialog.jsx",
+                  "name": "dialog.jsx"
+                },
+                {
+                  "path": "src/components/ui/dropdown-menu.jsx",
+                  "name": "dropdown-menu.jsx"
+                },
+                {
+                  "path": "src/components/ui/input.jsx",
+                  "name": "input.jsx"
+                },
+                {
+                  "path": "src/components/ui/label.jsx",
+                  "name": "label.jsx"
+                },
+                {
+                  "path": "src/components/ui/navigation-menu.jsx",
+                  "name": "navigation-menu.jsx"
+                },
+                {
+                  "path": "src/components/ui/select.jsx",
+                  "name": "select.jsx"
+                },
+                {
+                  "path": "src/components/ui/separator.jsx",
+                  "name": "separator.jsx"
+                },
+                {
+                  "path": "src/components/ui/sheet.jsx",
+                  "name": "sheet.jsx"
+                },
+                {
+                  "path": "src/components/ui/sticky-scroll-reveal.jsx",
+                  "name": "sticky-scroll-reveal.jsx"
+                },
+                {
+                  "path": "src/components/ui/switch.jsx",
+                  "name": "switch.jsx"
+                },
+                {
+                  "path": "src/components/ui/textarea.jsx",
+                  "name": "textarea.jsx"
+                },
+                {
+                  "path": "src/components/ui/vortex.jsx",
+                  "name": "vortex.jsx"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "src/hooks",
+          "name": "hooks",
+          "children": [
+            {
+              "path": "src/hooks/useScrollPosition.js",
+              "name": "useScrollPosition.js"
+            }
+          ]
+        },
+        {
+          "path": "src/lib",
+          "name": "lib",
+          "children": [
+            {
+              "path": "src/lib/data",
+              "name": "data",
+              "children": [
+                {
+                  "path": "src/lib/data/posts.js",
+                  "name": "posts.js"
+                }
+              ]
+            },
+            {
+              "path": "src/lib/mongodb.js",
+              "name": "mongodb.js"
+            },
+            {
+              "path": "src/lib/utils.js",
+              "name": "utils.js"
+            }
+          ]
+        },
+        {
+          "path": "src/types",
+          "name": "types",
+          "children": [
+            {
+              "path": "src/types/index.ts",
+              "name": "index.ts"
+            }
+          ]
+        },
+        {
+          "path": "src/utils",
+          "name": "utils",
+          "children": [
+            {
+              "path": "src/utils/metadata.js",
+              "name": "metadata.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tailwind.config.js",
+      "name": "tailwind.config.js"
+    }
+  ]
+}

@@ -23,6 +23,7 @@
     "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "directory-tree": "^3.5.2",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.456.0",
     "mongoose": "^8.8.2",
