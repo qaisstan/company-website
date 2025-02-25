@@ -5,7 +5,6 @@ import Head from "next/head";
 import AnimatedHeroSection from "@/components/HeroSection";
 import AnimatedServiceCards from "@/components/AnimatedServiceCard";
 import EnhancedAnimatedTestimonials from "@/components/Testimonials";
-
 import ProcessSection from "@/components/ProcessSection";
 
 export default function Home() {
@@ -22,12 +21,24 @@ export default function Home() {
           content="TRUSTON, innovative business solutions, web development, SEO optimization, cloud solutions, automation services, full-stack development, API integration, business growth solutions"
         />
       </Head>
+      
+      {/* Hero Section */}
       <AnimatedHeroSection />
-      <section id="services">
+      
+      {/* Services Section with increased spacing */}
+      <section className="py-32" id="services">
         <AnimatedServiceCards />
       </section>
-      <ProcessSection />
-      <EnhancedAnimatedTestimonials />
+      
+      {/* Process Section with increased spacing */}
+      <section className="py-32 bg-secondary/10">
+        <ProcessSection />
+      </section>
+      
+      {/* Testimonials Section with increased spacing */}
+      <section className="py-32">
+        <EnhancedAnimatedTestimonials />
+      </section>
     </>
   );
 }

@@ -50,7 +50,7 @@ const processSteps = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-20 px-4">
+    <section className="w-full py-20 px-4">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

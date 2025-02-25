@@ -53,7 +53,7 @@ const services = [
   {
     title: "SEO Optimization",
     description:
-      "Improve your website’s visibility in search results to help more people find and connect with your business.",
+      "Improve your website's visibility in search results to help more people find and connect with your business.",
     icon: <Search />,
     link: "/services/seo-optimization",
   },
@@ -74,10 +74,12 @@ const services = [
 
 export default function AnimatedCardService() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 p-0 max-w-7xl mx-auto">
-      {services.map((service, index) => (
-        <ServiceCard key={service.title} {...service} index={index} />
-      ))}
+    <div className="w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 p-0 max-w-7xl mx-auto">
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} {...service} index={index} />
+        ))}
+      </div>
     </div>
   );
 }

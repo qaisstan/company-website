@@ -54,7 +54,7 @@ export default function EnhancedAnimatedTestimonials() {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-10  from-primary/5 to-secondary/5 relative overflow-hidden">
+    <section className="w-full">
       <div className="absolute inset-0 bg-grid-white/[0.02] -z-10" />
       <div className="container px-4 md:px-6 relative z-10">
         <h2 className="text-3xl font-bold text-center mb-12">
