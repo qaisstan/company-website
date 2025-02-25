@@ -33,7 +33,7 @@ export default function AnimatedHeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              Practical Solutions for Everyday Challenges
+              Turn Complex Problems into Simple, Smart Solutions
             </motion.h1>
 
             {/* Hero Subtitle */}
@@ -43,8 +43,9 @@ export default function AnimatedHeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              We create software that solves problems, saves time, and makes
-              complex tasks easier to manage.
+              We build intelligent software that automates workflows, eliminates
+              inefficiencies, and helps your business grow without the
+              complexity.
             </motion.p>
 
             {/* Call-to-Actions */}

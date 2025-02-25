@@ -188,7 +188,7 @@ export default function Footer() {
         <div className="mt-8 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4 text-sm">
           <div className="flex items-center">
             <Mail className="h-4 w-4 mr-2" />
-            <span>contact@truston.dev</span>
+            <span>Qais@truston.dev</span>
           </div>
         </div>
       </div>

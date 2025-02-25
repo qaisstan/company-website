@@ -6,6 +6,8 @@ import AnimatedHeroSection from "@/components/HeroSection";
 import AnimatedServiceCards from "@/components/AnimatedServiceCard";
 import EnhancedAnimatedTestimonials from "@/components/Testimonials";
 
+import ProcessSection from "@/components/ProcessSection";
+
 export default function Home() {
   return (
     <>
@@ -24,6 +26,7 @@ export default function Home() {
       <section id="services">
         <AnimatedServiceCards />
       </section>
+      <ProcessSection />
       <EnhancedAnimatedTestimonials />
     </>
   );
